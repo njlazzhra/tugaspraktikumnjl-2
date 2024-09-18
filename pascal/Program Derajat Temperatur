@@ -1,0 +1,22 @@
+program DerajatTemperatur;
+uses crt;
+var 
+    celcius, reamur, fahrenheit, kelvin: real;
+
+begin
+    clrscr;
+    writeln('Program Mengubah Derajat Temperatur Celcius ke Temperatur Lainnya');
+    writeln('-----------------------------------------------------------------');
+
+    write('Masukkan Suhu (Celcius): ');
+    readln(celcius);
+
+    reamur := celcius * 4/5;
+    fahrenheit := (celcius * 9/5) + 32;
+    kelvin := celcius + 273.15;
+
+    writeln('Suhu Dalam Reamur: ', reamur:0:2);
+    writeln('Suhu Dalam Fahrenheit : ', fahrenheit:0:2);
+    writeln('Suhu Dalam Kelvin : ', kelvin:0:2);
+    readln;
+end.
