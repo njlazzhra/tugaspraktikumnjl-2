@@ -1,0 +1,33 @@
+program GajiKaryawan;
+uses crt;
+
+var
+  nama: string;
+  gajipokok, harilembur, haritidakbekerja, gajilembur, potongangaji, gajitotal: longint;
+
+begin
+  clrscr;
+  writeln('Program Menghitung Gaji Karyawan PT. Berjaya Abadi');
+  writeln('--------------------------------------------------');
+  
+  write('Nama Karyawan: ');
+  readln(nama);
+  write('Gaji Pokok: Rp ');
+  readln(gajipokok);
+  write('Lembur (hari): ');
+  readln(harilembur);
+  write('Tidak Bekerja (hari): ');
+  readln(haritidakbekerja);
+  
+  gajilembur := harilembur * 150000;
+  potongangaji := haritidakbekerja * 30000;
+  gajitotal := gajipokok + gajilembur - potongangaji;
+  
+  writeln('Nama Karyawan: ', nama);
+  writeln('Gaji Total: Rp ', gajitotal);
+  writeln('Rincian:');
+  writeln('  Gaji Pokok: Rp ', gajipokok);
+  writeln('  Gaji Lembur: Rp ', gajilembur, ' (untuk ', harilembur, ' hari lembur)');
+  writeln('  Potongan Gaji: Rp ', potongangaji, ' (untuk ', haritidakbekerja, ' hari tidak bekerja)');
+  readln;
+end.
