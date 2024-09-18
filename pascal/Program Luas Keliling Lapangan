@@ -1,0 +1,22 @@
+program LuasKelilingLapangan;
+uses crt;
+var 
+    panjang, lebar, luas, keliling: real;
+
+begin
+    clrscr;
+    writeln('Program Menghitung Luas Keliling Lapangan');
+    writeln('-----------------------------------------');
+
+    write('Panjang Lapangan : ');
+    readln(panjang);
+    write('Lebar Lapangan : ');
+    readln(lebar);
+    
+    luas := panjang * lebar;
+    keliling := 2 * (panjang + lebar);
+
+    writeln('Luas Lapangan : ', luas:0:2, ' meter persegi');
+    writeln('Keliling Lapangan : ', keliling:0:2, ' meter persegi');
+    readln;
+end.
